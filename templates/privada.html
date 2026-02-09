@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block contenido %}
+
+<h2 class="text-center mb-4">Bienvenido, {{ usuario }}</h2>
+
+<div class="text-center">
+    <a href="/nueva_resena" class="btn btn-primary m-2">Añadir reseña</a>
+    <a href="/mis_resenas" class="btn btn-secondary m-2">Mis reseñas</a>
+</div>
+
+{% endblock %}

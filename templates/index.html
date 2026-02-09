@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block contenido %}
+
+<h1 class="mb-4 text-center">Películas destacadas</h1>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/peli1.jpg') }}" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Inception</h5>
+                <p class="card-text">Un viaje visual y mental que redefine el cine moderno.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/peli2.jpg') }}" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Interstellar</h5>
+                <p class="card-text">Una obra maestra sobre el tiempo, el amor y el espacio.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/peli3.jpg') }}" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">The Batman</h5>
+                <p class="card-text">Oscura, elegante y con una banda sonora brutal.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

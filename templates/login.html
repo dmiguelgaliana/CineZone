@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block contenido %}
+
+<h2 class="text-center mb-4">Iniciar sesión</h2>
+
+<div class="col-md-6 mx-auto">
+    <form method="POST">
+
+        {% if error %}
+            <div class="alert alert-danger">{{ error }}</div>
+        {% endif %}
+
+        <label>Email</label>
+        <input type="email" name="mail" class="form-control mb-3" required>
+
+        <label>Contraseña</label>
+        <input type="password" name="contraseña" class="form-control mb-3" required>
+
+        <button class="btn btn-primary w-100">Entrar</button>
+    </form>
+</div>
+
+{% endblock %}

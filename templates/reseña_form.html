@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block contenido %}
+
+<h2 class="text-center mb-4">Nueva reseña</h2>
+
+<div class="col-md-6 mx-auto">
+    <form method="POST">
+
+        <label>Título</label>
+        <input type="text" name="titulo" class="form-control mb-3" required>
+
+        <label>Reseña</label>
+        <textarea name="resena" class="form-control mb-3" rows="4" required></textarea>
+
+        <label>Puntuación (1-10)</label>
+        <input type="number" name="puntuacion" min="1" max="10" class="form-control mb-3" required>
+
+        <button class="btn btn-success w-100">Guardar</button>
+    </form>
+</div>
+
+{% endblock %}

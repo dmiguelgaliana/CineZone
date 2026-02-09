@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block contenido %}
+
+<h2 class="text-center mb-4">Registro de usuario</h2>
+
+<div class="col-md-6 mx-auto">
+    <form method="POST">
+
+        <label>Nombre</label>
+        <input type="text" name="nombre" class="form-control mb-3" required>
+
+        <label>Email</label>
+        <input type="email" name="mail" class="form-control mb-3" required>
+
+        <label>Contraseña</label>
+        <input type="password" name="contraseña" class="form-control mb-3" required>
+
+        <label>Fecha de nacimiento</label>
+        <input type="date" name="fecha" class="form-control mb-3" required>
+
+        <button class="btn btn-success w-100">Registrarse</button>
+    </form>
+</div>
+
+{% endblock %}

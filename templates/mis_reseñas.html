@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block contenido %}
+
+<h2 class="text-center mb-4">Mis reseñas</h2>
+
+{% if reseñas %}
+    <div class="row">
+        {% for r in reseñas %}
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5>{{ r[0] }}</h5>
+                        <p>{{ r[1] }}</p>
+                        <span class="badge bg-primary">Puntuación: {{ r[2] }}/10</span>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <p class="text-center">Aún no has añadido ninguna reseña.</p>
+{% endif %}
+
+{% endblock %}
