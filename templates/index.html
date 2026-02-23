@@ -1,39 +1,34 @@
 {% extends "base.html" %}
 {% block contenido %}
 
-<h1 class="mb-4 text-center">Películas destacadas</h1>
+<h1 class="mb-4 text-center titulo-seccion">Películas destacadas</h1>
 
-<div class="row">
+<div class="row g-4">
 
-    <div class="col-md-4">
-        <div class="card">
-            <img src="{{ url_for('static', filename='img/peli1.jpg') }}" class="card-img-top">
+    {% set pelis = [
+        ('Inception', 'peli1.jpg', 'Un viaje visual y mental que redefine el cine moderno.'),
+        ('Interstellar', 'peli2.jpg', 'Una obra maestra sobre el tiempo, el amor y el espacio.'),
+        ('The Batman', 'peli3.jpg', 'Oscura, elegante y con una banda sonora brutal.'),
+        ('Dune', 'peli4.jpg', 'Una épica de ciencia ficción con un universo increíble.'),
+        ('Joker', 'peli5.jpg', 'Un retrato psicológico potente y perturbador.'),
+        ('Avatar', 'peli6.jpg', 'Un espectáculo visual revolucionario.'),
+        ('Oppenheimer', 'peli7.jpg', 'Una historia intensa sobre el poder y la responsabilidad.'),
+        ('The Dark Knight', 'peli8.jpg', 'Una de las mejores películas de superhéroes jamás hechas.'),
+        ('La La Land', 'peli9.jpg', 'Un musical moderno lleno de emoción y estilo.'),
+        ('Whiplash', 'peli10.jpg', 'Una obra tensa y brillante sobre la obsesión y la excelencia.')
+    ] %}
+
+    {% for titulo, imagen, texto in pelis %}
+    <div class="col-md-4 col-lg-3">
+        <div class="card card-peli shadow-sm">
+            <img src="{{ url_for('static', filename='img/' ~ imagen) }}" class="card-img-top">
             <div class="card-body">
-                <h5 class="card-title">Inception</h5>
-                <p class="card-text">Un viaje visual y mental que redefine el cine moderno.</p>
+                <h5 class="card-title">{{ titulo }}</h5>
+                <p class="card-text">{{ texto }}</p>
             </div>
         </div>
     </div>
-
-    <div class="col-md-4">
-        <div class="card">
-            <img src="{{ url_for('static', filename='img/peli2.jpg') }}" class="card-img-top">
-            <div class="card-body">
-                <h5 class="card-title">Interstellar</h5>
-                <p class="card-text">Una obra maestra sobre el tiempo, el amor y el espacio.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="card">
-            <img src="{{ url_for('static', filename='img/peli3.jpg') }}" class="card-img-top">
-            <div class="card-body">
-                <h5 class="card-title">The Batman</h5>
-                <p class="card-text">Oscura, elegante y con una banda sonora brutal.</p>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 
 </div>
 
