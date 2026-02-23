@@ -1,39 +1,49 @@
-🎬 CineZone
-CineZone es una aplicación web desarrollada con Flask y MySQL como proyecto final del módulo Implantació d’Aplicacions Web (ASIX).
-La web permite a los usuarios registrarse, iniciar sesión, acceder a una zona privada y publicar reseñas de películas.
-Incluye una parte pública con un catálogo visual de 10 películas y una página “About me”.
+🎬 CineZone — Proyecto Final ASIX
+🌟 Descripción del proyecto
+CineZone es una aplicación web desarrollada con Flask y MySQL como proyecto final del módulo
+Implantació d’Aplicacions Web (ASIX).
 
-🚀 Funcionalidades
+El sitio permite:
+
+Registro e inicio de sesión de usuarios
+
+Acceso a una zona privada
+
+Publicación de reseñas de películas
+
+Visualización de un catálogo de 10 películas
+
+Página “About me” con portafolio del alumno
+
+Todo con un diseño moderno basado en Bootstrap 5, animaciones CSS y una estructura profesional.
+
+🧩 Características principales
 🔓 Parte pública
-Página de inicio con 10 películas destacadas.
+Catálogo de 10 películas con tarjetas visuales
 
-Diseño moderno con Bootstrap 5, animaciones y cards visuales.
+Animaciones suaves y diseño responsive
 
-Página About me con portafolio del alumno.
+Página “About me” con proyectos del alumno
 
-Acceso a login y registro.
+Acceso a login y registro
 
 🔐 Parte privada
-Acceso solo para usuarios registrados.
+Bienvenida personalizada
 
-Página de bienvenida personalizada.
+Formulario para añadir reseñas
 
-Formulario para añadir reseñas.
+Listado de reseñas creadas por el usuario
 
-Listado de reseñas creadas por el usuario.
-
-Cierre de sesión.
+Cierre de sesión
 
 🗄️ Base de datos
-La aplicación utiliza MySQL con dos tablas:
-
-Tabla registro
+📌 Tabla registro
 Campo	Tipo
 Nombre	varchar(50)
 Mail	varchar(50)
 Contraseña	varchar(50)
 Fecha	varchar(50)
-Tabla reseñas
+📌 Tabla reseñas
 Campo	Tipo
 id	int AUTO_INCREMENT PRIMARY KEY
 usuario	varchar(50)
@@ -53,13 +63,13 @@ HTML5 + CSS3
 
 FontAwesome
 
-📦 Instalación
+Jinja2 (templates)
+
+📦 Instalación y ejecución
 1️⃣ Clonar el repositorio
 bash
 git clone https://github.com/TU-USUARIO/TU-REPO.git
 cd TU-REPO
-(Sustituye TU-USUARIO y TU-REPO por los reales.)
-
 2️⃣ Instalar dependencias
 bash
 pip install -r requirements.txt
@@ -82,11 +92,7 @@ Asegúrate de que los nombres coinciden exactamente.
 4️⃣ Ejecutar la aplicación
 bash
 python app.py
-Flask mostrará:
-
-Código
-Running on http://127.0.0.1:5000
-Abre tu navegador y entra en:
+La web estará disponible en:
 
 Código
 http://127.0.0.1:5000
@@ -109,20 +115,22 @@ peli8.jpg
 peli9.jpg
 peli10.jpg
 logo.png
-🎨 Diseño
-La web utiliza:
+🎨 Diseño y estilo
+La web incluye:
 
-Navbar moderna con iconos.
+Navbar moderna con iconos
 
-Cards animadas para las películas.
+Cards animadas para películas
 
-Animaciones suaves al cargar contenido.
+Hover effects y sombras dinámicas
 
-Footer minimalista.
+Footer minimalista
 
-Formularios estilizados con Bootstrap.
+Formularios estilizados
 
-Estilos personalizados en:
+Animaciones suaves al cargar contenido
+
+Todo el estilo personalizado está en:
 
 Código
 static/css/estilos.css
